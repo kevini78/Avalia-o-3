@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Estrutura para armazenar informações do produto
+
 typedef struct {
     int codigo;
     char descricao[50];
@@ -9,12 +9,12 @@ typedef struct {
     float valor;
 } Produto;
 
-// Função que inicializa uma lista vazia
+
 void inicializarEstoque(Produto estoque[], int *numProdutos) {
     *numProdutos = 0;
 }
 
-// Função que adiciona um novo produto à lista de estoque
+
 void adicionarProduto(Produto estoque[], int *numProdutos) {
     printf("Informe o código do produto: ");
     scanf("%d", &estoque[*numProdutos].codigo);
@@ -31,7 +31,7 @@ void adicionarProduto(Produto estoque[], int *numProdutos) {
     (*numProdutos)++;
 }
 
-// Função que imprime um relatório com as informações de cada produto
+
 void gerarRelatorio(Produto estoque[], int numProdutos) {
     printf("\nRelatório de Estoque:\n");
     for (int i = 0; i < numProdutos; i++) {
@@ -40,7 +40,7 @@ void gerarRelatorio(Produto estoque[], int numProdutos) {
     }
 }
 
-// Função que permite ao usuário pesquisar um produto pelo código
+
 void consultarProduto(Produto estoque[], int numProdutos) {
     int codigo;
     printf("Informe o código do produto a ser consultado: ");
@@ -58,7 +58,7 @@ void consultarProduto(Produto estoque[], int numProdutos) {
     printf("Produto não encontrado.\n");
 }
 
-// Função que permite ao usuário remover um produto do estoque
+
 void removerProduto(Produto estoque[], int *numProdutos) {
     int codigo;
     printf("Informe o código do produto a ser removido: ");
@@ -80,7 +80,7 @@ void removerProduto(Produto estoque[], int *numProdutos) {
 }
 
 int main() {
-    Produto estoque[100];  // Supomos que o estoque pode ter no máximo 100 produtos
+    Produto estoque[100];  
     int numProdutos = 0;
     int opcao;
 
